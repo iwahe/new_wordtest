@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>teeeest</title>
+</head>
+<body>
+    <input class="button-print" type="button"  value="Print" onclick="window.print();" /> My score is 　　/36
+
+    <section class="page"> 
+        <table class="wordtest" border="1">
+            <tr>
+                <th>word</th>
+                <th>meaning</th>
+                <th>answer</th>
+            </tr>
+
+        <!-- forループで出力-->
+    {%if format == "read"%}
+    {% for item in data %}
+            <tr>
+                <td>{{ item.word }}</td>
+                <td>　　　　　　　　</td>
+                <td>{{ item.meaning }}</td>
+            </tr>
+    {% endfor %}
+    
+    {% elif format == "write"%}
+    {% for item in data %}
+            <tr>
+                <td>　　　　　　　</td>
+                <td>{{ item.meaning }}</td>
+                <td>{{ item.word }}</td>
+            </tr>
+    {% endfor %}
+    {% endif %}
+        </table>  
+    </section>
+    ↑70%:26/36 ↑80%:28/36 ↑90%:33/36
+
+{% endblock %}

@@ -1,0 +1,42 @@
+/*印刷時に表示しないようにする*/
+@media print{
+    .button-print{
+        display: none;
+    }
+}
+
+.button-print{
+    background-color: rgb(14, 15, 15);
+    color: #f8f8f8;
+    cursor: pointer;
+    padding: 0px 10px;
+    border-radius: 7px;
+}
+
+table {
+    /*罫線を深くするかしないか"separate or collapse"*/
+    border-collapse: collapse;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0px;
+}
+
+table th {
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+}
+
+/*反応しない
+input[type="radio"]{
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body {
+        padding-top: 70px;
+    }
+</style>
+
+<title>eeeeezzzzzzzz</title>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EEEEASY TEST MAKER</a>
+    </nav>
+</header>
+    
+    
+    <form action="" name="wordtest"  method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="wordbook_secect">
+            <p>wordbook_select<br>
+                <input type="radio" id="target1900" name="wordbook" value="target1900" checked><label for="target1900">target1900</label>
+                <input type="radio" id="idiom1000" name="wordbook" value="idiom1000"><label for="idiom1000">idiom1000</label>
+            </p>
+            
+        </div>
+<!--明日はここからやる-->
+        <div>  
+            <label for="start">start:</label>
+            <input type="number" value="1" id="start" name ="start" min="1" max="1900">
+            <label for="end">end:</label>
+            <input type="number" value="100" id="end" name="end" min="1" max="1900">
+        </div>
+
+        <div>
+            <p>reading or writing<br>
+                <input type="radio" id="read" name="rw" value="read" checked><label for="read">reading</label>
+                <input type="radio" id="write" name="rw" value="write"><label for="write">writing</label>
+            </p>
+        </div>    
+        <input type="submit" value="select">
+    </form>
+    
+
+    <!--位置を絶対指定する-->
+    <div style="position:absolute; top:20px; right:0; ">
+        <h2>プレビューを表示する</h2>
+        <iframe class="frame_center" src="test" width="400" height="400"></iframe>
+    </div>
+    
+    
+{% endblock %}
+
+<!-- name属性-->
+
+<!-- 
+    labelタグのfor属性とinputタグのid属性(postで取得するときの名前)は一致させる(連動する)
+
+    value属性は送信するときの値を示す
+
+    name属性はラジオボタンをグループ化する
+
+    minとmaxは単語帳によって可変だから変数のほうがいいかも
+
+    印刷用にcssを設定して見た目を印刷時に変えることが出来るっぽい
+-->
+
+
+
+

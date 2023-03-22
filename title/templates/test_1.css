@@ -1,0 +1,5 @@
+/*portrait(縦長) landscape(横長)*/
+@page{
+    size:A4 portrait;
+    margin: 0mm;
+}

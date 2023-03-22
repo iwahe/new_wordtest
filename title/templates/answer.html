@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <section class="page">
+        
+        <table border="1">
+            <tr>
+                <th>word</th>
+                <th>meaning</th>
+            </tr>
+    {% for item in data %}
+            <tr>
+                <td>{{ item.word }}</td>
+                <td>{{ item.meaning }}</td>
+            </tr>
+    {% endfor %}
+
+        </table>
+        
+    </section>
+
+{% endblock %}
